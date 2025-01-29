@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sheet">
+        <div class="head"><h1>to-do-sheet</h1></div>
+        <div class="complete">
+          <h1>Completed tasks</h1>
+          <ol id="completedTasks"></ol>
+
+          <button onclick="editLine()" type="submit">Edit</button>
+        </div>
+        <div class="tasks">
+          <h1>to do tasks</h1>
+          <div class="line">
+            <input type="text" class="inputLine" name="" value="" />
+          </div>
+
+          <div class="line">
+            <input type="text" class="inputLine" name="" value="" />
+          </div>
+        </div>
+
+        <div class="buttonContainer">
+          <button onclick="addLine()" type="submit">New</button>
+          <button onclick="removeLine()" type="submit">Remove</button>
+          <button onclick="completeLine()" type="submit">Complete</button>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
