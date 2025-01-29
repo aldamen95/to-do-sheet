@@ -16,14 +16,17 @@
 
           <button onclick="editLine()" type="submit">Edit</button>
         </div>
-        <div class="tasks">
-          <h1>to do tasks</h1>
-          <div class="line">
-            <input type="text" class="inputLine" name="" value="" />
-          </div>
 
+        <div class="complete">
+          <h1>to-do tasks</h1>
+          <ul id="todoTasks"></ul>
+
+          <button onclick="editToDo()" type="submit">Edit</button>
+        </div>
+        <div class="tasks">
+          <h1>create task</h1>
           <div class="line">
-            <input type="text" class="inputLine" name="" value="" />
+            <input type="text" placeholder="create a new to do task" class="inputLine" name="" value="" />
           </div>
         </div>
 
@@ -31,6 +34,7 @@
           <button onclick="addLine()" type="submit">New</button>
           <button onclick="removeLine()" type="submit">Remove</button>
           <button onclick="completeLine()" type="submit">Complete</button>
+          <button onclick="todo()" type="submit">todo</button>
         </div>
       </div>
     </div>
