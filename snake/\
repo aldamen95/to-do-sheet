@@ -1,0 +1,37 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const grid = document.querySelector(".grid");
+  const squares = document.querySelectorAll(".grid div");
+  const speed = 9;
+  const interval = 100;
+  const timeInterval = null;
+  let snake = [2, 1, 0];
+  let direction = 1;
+  const width = 10;
+  const currentIndex = 0;
+
+  snake.forEach((index) => {
+    squares[index].classList.add("snake");
+  });
+
+  squares.forEach((square, index) => {
+    square.textContent = index;
+  });
+
+  function moveSnake() {
+    const head = snake[0];
+    const tail = snake.pop(); //removes last ite of the array and shows it
+    squares[tail].classList.remove("snake"); //removes class of snake from the TAIL
+    snake.unshift(snake[0] + direction); //gives direction to the head of the array
+    head.classList.add("snake");
+  }
+
+  //function control() {
+  document.addEventListener("keydown", (event) => {
+    squares[currentIndex].classList.remove("snake");
+    if (event.keyCode === 74) {
+      direction = +width;
+    }
+  });
+  //}
+  setInterval(moveSnake, interval);
+});
